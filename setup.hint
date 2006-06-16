@@ -1,0 +1,4 @@
+category: Gnome Math
+requires: cygwin GConf2 atk gtk2-x11 libart_lgpl2 libbonobo2 libglade2 libgnomeprint22 libgnomeprintui2 libgnomeui2 libgoffice1 pygtk2 python
+sdesc: "GNOME Office Spreadsheet"
+ldesc: "GNOME Office Spreadsheet"
