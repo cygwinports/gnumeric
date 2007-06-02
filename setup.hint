@@ -1,4 +1,11 @@
 category: Gnome Math
-requires: cygwin GConf2 atk gtk2-x11 libart_lgpl2 libbonobo2 libglade2 libgnomeprint22 libgnomeprintui2 libgnomeui2 libgoffice1 pygtk2 python
+requires: cygwin GConf2 ORBit2 atk glib2 gnome-vfs2 gtk2-x11 libart_lgpl2 libbonobo2 libbonoboui2 libglade2 libgnome2 libgnomeprint22 libgnomeprintui2 libgnomeui2 libgoffice1 libgsf114 libintl8 libpopt0 libxml2 pango python python-gobject2 python-gtk2 zlib
 sdesc: "GNOME Office Spreadsheet"
-ldesc: "GNOME Office Spreadsheet"
+ldesc: "The Gnumeric spreadsheet is part of the GNOME desktop 
+environment -- a project to create a free, user friendly desktop 
+environment.
+
+The goal of Gnumeric is to be the best possible spreadsheet. We are not
+attempting to clone existing applications. However, Gnumeric can read
+files saved with other spreadsheets and we offer a customizable feel
+that attempts to minimize the costs of transition."

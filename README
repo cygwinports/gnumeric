@@ -1,37 +1,57 @@
 gnumeric
 -------------------------------------------
-GNOME Office Spreadsheet
+The Gnumeric spreadsheet is part of the GNOME desktop environment: a 
+project to create a free, user friendly desktop environment.
+
+The goal of Gnumeric is to be the best possible spreadsheet. We are not 
+attempting to clone existing applications. However, Gnumeric can read 
+files saved with other spreadsheets and we offer a customizable feel 
+that attempts to minimize the costs of transition.
 
 Runtime requirements:
-  cygwin-1.5.20-1
-  GConf2-2.14.0-2
-  atk-1.10.3-1
-  gtk2-x11-2.8.17-1
-  libart_lgpl2-2.3.17-1
-  libbonobo2-2.14.0-1
-  libglade2-2.5.1-1
-  libgoffice1-0.2.1-1
+  cygwin-1.5.24-2
+  GConf2-2.16.1-1
+  ORBit2-2.14.7-1
+  atk-1.18.0-1
+  gdk-pixbuf2-2.10.12-1
+  glib2-2.12.12-1
+  gnome-vfs2-2.16.3-1
+  gtk2-x11-2.10.12-1
+  libart_lgpl2-2.3.19-1
+  libbonobo2-2.16.0-1
+  libbonoboui2-2.16.0-1
+  libglade2-2.6.0-1
+  libgnome2-2.16.0-1
   libgnomeprint22-2.12.1-2
   libgnomeprintui22-2.12.1-1
-  libgnomeui2-2.14.1-1
-  pygtk2-2.8.6-1
-  python-2.4.3-1
+  libgnomeui2-2.16.1-1
+  libgoffice1-0.2.1-1
+  libgsf114-1.14.2-1
+  libintl8-0.15-1
+  libpopt0-1.10.4-1
+  libxml2-2.6.28-1
+  pango-1.16.4-1
+  python-2.5.1-1
+  python-gobject2-2.12.3-2
+  python-gtk2-2.10.4-2
+  zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.20-1
-  autoconf2.5-2.59-2
-  automake1.9-1.9.6-1
-  binutils-20050610-1
-  cygport-0.2.2-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  intltool-0.35.0-1
-  libtool1.5-1.5.22-1
-  make-3.80-1
-  pkg-config-0.20-1
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gnome-common-2.18.0-1
+  intltool-0.35.5-1
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
   scrollkeeper-0.3.14-2
-  sed-4.1.5-1
+  sed-4.1.5-2
 
 Canonical homepage:
   http://www.gnome.org/projects/gnumeric/
@@ -42,15 +62,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnumeric-1.6.3-1-src.tar.bz2
+  unpack gnumeric-1.6.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gnumeric-1.6.3-1.cygport all
+  cygport ./gnumeric-1.6.3-X.cygport all
 
 This will create:
-  /usr/src/gnumeric-1.6.3-1-src.tar.bz2
-  /usr/src/gnumeric-1.6.3-1.tar.bz2
+  /usr/src/gnumeric-1.6.3-X-src.tar.bz2
+  /usr/src/gnumeric-1.6.3-X.tar.bz2
 
 -------------------------------------------
 
@@ -810,6 +830,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 1.6.3-2 -----
+Rebuilt for python-2.5 and other dependencies.
 
 ----- version 1.6.3-1 -----
 Version bump.
