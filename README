@@ -9,48 +9,46 @@ files saved with other spreadsheets and we offer a customizable feel
 that attempts to minimize the costs of transition.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  GConf2-2.16.1-1
-  ORBit2-2.14.7-1
-  atk-1.18.0-1
-  gdk-pixbuf2-2.10.12-1
-  glib2-2.12.12-1
-  gnome-vfs2-2.16.3-1
-  gtk2-x11-2.10.12-1
-  libart_lgpl2-2.3.19-1
-  libbonobo2-2.16.0-1
-  libbonoboui2-2.16.0-1
-  libglade2-2.6.0-1
-  libgnome2-2.16.0-1
-  libgnomeprint22-2.12.1-2
-  libgnomeprintui22-2.12.1-1
-  libgnomeui2-2.16.1-1
-  libgoffice1-0.2.1-1
-  libgsf114-1.14.2-1
+  cygwin-1.5.25-7
+  GConf2-2.20.1-1
+  ORBit2-2.14.10-1
+  atk-1.20.0-1
+  gdk-pixbuf2-2.12.3-1
+  glib2-2.14.4-1
+  gnome-vfs2-2.20.1-1
+  gtk2-x11-2.12.3-1
+  libbonobo2-2.20.2-1
+  libbonoboui2-2.20.0-1
+  libcairo2-1.4.12-1
+  libglade2-2.6.2-1
+  libgnome2-2.20.1.1-1
+  libgnomeui2-2.20.1.1-1
+  libgoffice06-0.6.1-1
+  libgsf114-1.14.7-1
   libintl8-0.15-1
-  libpopt0-1.10.4-1
-  libxml2-2.6.28-1
-  pango-1.16.4-1
-  python-2.5.1-1
-  python-gobject2-2.12.3-2
-  python-gtk2-2.10.4-2
+  libpx0-0.6.3-1
+  libxml2-2.6.30-1
+  pango-1.18.3-1
+  python-2.5.1-3
+  python-gobject2-2.14.0-1
+  python-gtk2-2.12.0-1
   zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
+  cygwin-1.5.25-7
   autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
+  automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.2.11-1
+  cygport-0.3.7-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
-  gnome-common-2.18.0-1
-  intltool-0.35.5-1
+  gnome-common-2.20.0-1
+  intltool-0.36.3-1
   libtool1.5-1.5.23a-2
   make-3.81-1
   pkg-config-0.21-1
-  scrollkeeper-0.3.14-2
+  rarian-0.6.0-1
   sed-4.1.5-2
 
 Canonical homepage:
@@ -62,15 +60,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnumeric-1.6.3-X-src.tar.bz2
+  unpack gnumeric-1.8.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gnumeric-1.6.3-X.cygport all
+  cygport ./gnumeric-1.8.0-X.cygport all
 
 This will create:
-  /usr/src/gnumeric-1.6.3-X-src.tar.bz2
-  /usr/src/gnumeric-1.6.3-X.tar.bz2
+  /usr/src/gnumeric-1.8.0-X-src.tar.bz2
+  /usr/src/gnumeric-1.8.0-X.tar.bz2
 
 -------------------------------------------
 
@@ -81,129 +79,253 @@ Files included in the binary package:
   /etc/gconf/schemas/gnumeric-plugins.schemas
   /etc/postinstall/gnumeric.sh
   /etc/preremove/gnumeric.sh
-  /usr/bin/cygspreadsheet-1-6-3.dll
-  /usr/bin/gnumeric-1.6.3.exe
+  /usr/bin/cygspreadsheet-1-8-0.dll
+  /usr/bin/gnumeric-1.8.0.exe
   /usr/bin/gnumeric.exe
   /usr/bin/ssconvert.exe
-  /usr/lib/bonobo/servers/GNOME_Gnumeric.server
-  /usr/lib/gnumeric/1.6.3/plugins/applix/applix.dll
-  /usr/lib/gnumeric/1.6.3/plugins/applix/applix.la
-  /usr/lib/gnumeric/1.6.3/plugins/applix/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/corba/corba.dll
-  /usr/lib/gnumeric/1.6.3/plugins/corba/corba.la
-  /usr/lib/gnumeric/1.6.3/plugins/corba/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/derivatives/derivatives.dll
-  /usr/lib/gnumeric/1.6.3/plugins/derivatives/derivatives.la
-  /usr/lib/gnumeric/1.6.3/plugins/derivatives/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/dif/dif.dll
-  /usr/lib/gnumeric/1.6.3/plugins/dif/dif.la
-  /usr/lib/gnumeric/1.6.3/plugins/dif/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/excel/excel.dll
-  /usr/lib/gnumeric/1.6.3/plugins/excel/excel.la
-  /usr/lib/gnumeric/1.6.3/plugins/excel/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-complex/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-complex/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-complex/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-database/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-database/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-database/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-date/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-date/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-date/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-eng/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-eng/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-eng/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-erlang/erlang.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-erlang/erlang.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-erlang/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-financial/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-financial/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-financial/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-info/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-info/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-info/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-logical/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-logical/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-logical/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-lookup/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-lookup/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-lookup/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-math/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-math/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-math/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-r/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-r/rstat.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-r/rstat.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-random/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-random/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-random/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-stat/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-stat/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-stat/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/fn-string/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/fn-string/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/fn-string/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/gnome-glossary/glossary-po-header
-  /usr/lib/gnumeric/1.6.3/plugins/gnome-glossary/gnome_glossary.py
-  /usr/lib/gnumeric/1.6.3/plugins/gnome-glossary/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/html/html.dll
-  /usr/lib/gnumeric/1.6.3/plugins/html/html.la
-  /usr/lib/gnumeric/1.6.3/plugins/html/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/lotus/lotus.dll
-  /usr/lib/gnumeric/1.6.3/plugins/lotus/lotus.la
-  /usr/lib/gnumeric/1.6.3/plugins/lotus/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/mps/mps.dll
-  /usr/lib/gnumeric/1.6.3/plugins/mps/mps.la
-  /usr/lib/gnumeric/1.6.3/plugins/mps/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/numtheory/numtheory.dll
-  /usr/lib/gnumeric/1.6.3/plugins/numtheory/numtheory.la
-  /usr/lib/gnumeric/1.6.3/plugins/numtheory/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/oleo/oleo.dll
-  /usr/lib/gnumeric/1.6.3/plugins/oleo/oleo.la
-  /usr/lib/gnumeric/1.6.3/plugins/oleo/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/openoffice/openoffice.dll
-  /usr/lib/gnumeric/1.6.3/plugins/openoffice/openoffice.la
-  /usr/lib/gnumeric/1.6.3/plugins/openoffice/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/plan_perfect/plan_perfect.dll
-  /usr/lib/gnumeric/1.6.3/plugins/plan_perfect/plan_perfect.la
-  /usr/lib/gnumeric/1.6.3/plugins/plan_perfect/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/py-func/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/py-func/py_func.py
-  /usr/lib/gnumeric/1.6.3/plugins/python-loader/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/python-loader/python_loader.dll
-  /usr/lib/gnumeric/1.6.3/plugins/python-loader/python_loader.la
-  /usr/lib/gnumeric/1.6.3/plugins/python-loader/ui-console-menu.xml
-  /usr/lib/gnumeric/1.6.3/plugins/qpro/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/qpro/qpro.dll
-  /usr/lib/gnumeric/1.6.3/plugins/qpro/qpro.la
-  /usr/lib/gnumeric/1.6.3/plugins/sample_datasource/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/sample_datasource/sample_datasource.dll
-  /usr/lib/gnumeric/1.6.3/plugins/sample_datasource/sample_datasource.la
-  /usr/lib/gnumeric/1.6.3/plugins/sc/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/sc/sc.dll
-  /usr/lib/gnumeric/1.6.3/plugins/sc/sc.la
-  /usr/lib/gnumeric/1.6.3/plugins/sylk/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/sylk/sylk.dll
-  /usr/lib/gnumeric/1.6.3/plugins/sylk/sylk.la
-  /usr/lib/gnumeric/1.6.3/plugins/uihello/hello.xml
-  /usr/lib/gnumeric/1.6.3/plugins/uihello/plugin.dll
-  /usr/lib/gnumeric/1.6.3/plugins/uihello/plugin.la
-  /usr/lib/gnumeric/1.6.3/plugins/uihello/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/xbase/plugin.xml
-  /usr/lib/gnumeric/1.6.3/plugins/xbase/xbase.dll
-  /usr/lib/gnumeric/1.6.3/plugins/xbase/xbase.la
+  /usr/bin/ssindex.exe
+  /usr/include/libspreadsheet-1.8/spreadsheet/application.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/auto-format.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/cell-draw.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/cell.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/cellspan.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/clipboard.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/cmd-edit.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/collect.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/colrow.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/command-context-stderr.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/command-context.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/commands.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/complete-sheet.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/complete.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/complex.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/consolidate.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/dependent.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/expr-impl.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/expr-name.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/expr.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/file-autoft.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/format-template.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/func-builtin.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/func.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnm-datetime.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnm-format.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnm-graph-window.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnm-pane.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnm-plugin.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnm-so-filled.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnm-so-line.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnm-so-polygon.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnm-style-impl.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnumeric-gconf.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnumeric-simple-canvas.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gnumeric.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/graph.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gui-clipboard.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gui-file.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gui-gnumeric.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gui-util.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/gutils.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/history.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/hlink-impl.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/hlink.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/input-msg.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/item-acetate.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/item-bar.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/item-cursor.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/item-debug.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/item-edit.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/item-grid.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/libgnumeric.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/mathfunc.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/mstyle.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/number-match.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/numbers.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/parse-util.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/pattern.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/position.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/preview-grid.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/print-cell.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/print-info.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/print.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/rangefunc-strings.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/rangefunc.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/ranges.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/regression.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/rendered-value.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/search.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/selection.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/session.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-autofill.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-control-gui-priv.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-control-gui.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-control-priv.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-control.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-filter-combo.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-filter.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-merge.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-object-cell-comment.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-object-graph.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-object-image.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-object-impl.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-object-widget.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-object.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-private.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-style.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet-view.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sheet.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/solver.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/sort.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/stf-export.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/stf-parse.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/stf.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/str.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/style-border.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/style-color.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/style-conditions.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/style-font.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/style.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/symbol.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/validation-combo.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/validation.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/value.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/wbc-gtk-impl.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/wbc-gtk.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/workbook-cmd-format.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/workbook-control-priv.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/workbook-control.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/workbook-priv.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/workbook-view.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/workbook.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/xml-io-version.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/xml-io.h
+  /usr/include/libspreadsheet-1.8/spreadsheet/xml-sax.h
+  /usr/lib/gnumeric/1.8.0/include/gnumeric-features.h
+  /usr/lib/gnumeric/1.8.0/plugins/applix/applix.dll
+  /usr/lib/gnumeric/1.8.0/plugins/applix/applix.la
+  /usr/lib/gnumeric/1.8.0/plugins/applix/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/corba/corba.dll
+  /usr/lib/gnumeric/1.8.0/plugins/corba/corba.la
+  /usr/lib/gnumeric/1.8.0/plugins/corba/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/derivatives/derivatives.dll
+  /usr/lib/gnumeric/1.8.0/plugins/derivatives/derivatives.la
+  /usr/lib/gnumeric/1.8.0/plugins/derivatives/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/dif/dif.dll
+  /usr/lib/gnumeric/1.8.0/plugins/dif/dif.la
+  /usr/lib/gnumeric/1.8.0/plugins/dif/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/excel/excel.dll
+  /usr/lib/gnumeric/1.8.0/plugins/excel/excel.la
+  /usr/lib/gnumeric/1.8.0/plugins/excel/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-complex/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-complex/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-complex/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-database/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-database/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-database/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-date/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-date/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-date/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-eng/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-eng/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-eng/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-erlang/erlang.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-erlang/erlang.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-erlang/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-financial/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-financial/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-financial/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-info/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-info/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-info/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-logical/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-logical/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-logical/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-lookup/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-lookup/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-lookup/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-math/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-math/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-math/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-r/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-r/rstat.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-r/rstat.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-random/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-random/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-random/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-stat/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-stat/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-stat/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-string/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-string/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-string/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/fn-tsa/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/fn-tsa/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/fn-tsa/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/gnome-glossary/glossary-po-header
+  /usr/lib/gnumeric/1.8.0/plugins/gnome-glossary/gnome_glossary.py
+  /usr/lib/gnumeric/1.8.0/plugins/gnome-glossary/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/html/html.dll
+  /usr/lib/gnumeric/1.8.0/plugins/html/html.la
+  /usr/lib/gnumeric/1.8.0/plugins/html/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/lotus/lotus.dll
+  /usr/lib/gnumeric/1.8.0/plugins/lotus/lotus.la
+  /usr/lib/gnumeric/1.8.0/plugins/lotus/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/mps/mps.dll
+  /usr/lib/gnumeric/1.8.0/plugins/mps/mps.la
+  /usr/lib/gnumeric/1.8.0/plugins/mps/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/numtheory/numtheory.dll
+  /usr/lib/gnumeric/1.8.0/plugins/numtheory/numtheory.la
+  /usr/lib/gnumeric/1.8.0/plugins/numtheory/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/oleo/oleo.dll
+  /usr/lib/gnumeric/1.8.0/plugins/oleo/oleo.la
+  /usr/lib/gnumeric/1.8.0/plugins/oleo/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/openoffice/openoffice.dll
+  /usr/lib/gnumeric/1.8.0/plugins/openoffice/openoffice.la
+  /usr/lib/gnumeric/1.8.0/plugins/openoffice/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/paradox/paradox.dll
+  /usr/lib/gnumeric/1.8.0/plugins/paradox/paradox.la
+  /usr/lib/gnumeric/1.8.0/plugins/paradox/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/plan_perfect/plan_perfect.dll
+  /usr/lib/gnumeric/1.8.0/plugins/plan_perfect/plan_perfect.la
+  /usr/lib/gnumeric/1.8.0/plugins/plan_perfect/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/py-func/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/py-func/py_func.py
+  /usr/lib/gnumeric/1.8.0/plugins/python-loader/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/python-loader/python_loader.dll
+  /usr/lib/gnumeric/1.8.0/plugins/python-loader/python_loader.la
+  /usr/lib/gnumeric/1.8.0/plugins/python-loader/ui-console-menu.xml
+  /usr/lib/gnumeric/1.8.0/plugins/qpro/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/qpro/qpro.dll
+  /usr/lib/gnumeric/1.8.0/plugins/qpro/qpro.la
+  /usr/lib/gnumeric/1.8.0/plugins/sample_datasource/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/sample_datasource/sample_datasource.dll
+  /usr/lib/gnumeric/1.8.0/plugins/sample_datasource/sample_datasource.la
+  /usr/lib/gnumeric/1.8.0/plugins/sc/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/sc/sc.dll
+  /usr/lib/gnumeric/1.8.0/plugins/sc/sc.la
+  /usr/lib/gnumeric/1.8.0/plugins/sylk/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/sylk/sylk.dll
+  /usr/lib/gnumeric/1.8.0/plugins/sylk/sylk.la
+  /usr/lib/gnumeric/1.8.0/plugins/uihello/hello.xml
+  /usr/lib/gnumeric/1.8.0/plugins/uihello/plugin.dll
+  /usr/lib/gnumeric/1.8.0/plugins/uihello/plugin.la
+  /usr/lib/gnumeric/1.8.0/plugins/uihello/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/xbase/plugin.xml
+  /usr/lib/gnumeric/1.8.0/plugins/xbase/xbase.dll
+  /usr/lib/gnumeric/1.8.0/plugins/xbase/xbase.la
+  /usr/lib/libspreadsheet.dll.a
   /usr/lib/libspreadsheet.la
+  /usr/lib/pkgconfig/libspreadsheet-1.8.pc
   /usr/share/applications/gnumeric.desktop
-  /usr/share/doc/Cygwin/gnumeric-1.6.3.README
-  /usr/share/doc/gnumeric-1.6.3/AUTHORS
-  /usr/share/doc/gnumeric-1.6.3/BUGS
-  /usr/share/doc/gnumeric-1.6.3/ChangeLog
-  /usr/share/doc/gnumeric-1.6.3/COPYING
-  /usr/share/doc/gnumeric-1.6.3/HACKING
-  /usr/share/doc/gnumeric-1.6.3/INSTALL
-  /usr/share/doc/gnumeric-1.6.3/MAINTAINERS
-  /usr/share/doc/gnumeric-1.6.3/NEWS
-  /usr/share/doc/gnumeric-1.6.3/README
+  /usr/share/doc/gnumeric-1.8.0/AUTHORS
+  /usr/share/doc/gnumeric-1.8.0/BUGS
+  /usr/share/doc/gnumeric-1.8.0/COPYING
+  /usr/share/doc/gnumeric-1.8.0/ChangeLog
+  /usr/share/doc/gnumeric-1.8.0/HACKING
+  /usr/share/doc/gnumeric-1.8.0/INSTALL
+  /usr/share/doc/gnumeric-1.8.0/MAINTAINERS
+  /usr/share/doc/gnumeric-1.8.0/NEWS
+  /usr/share/doc/gnumeric-1.8.0/README
   /usr/share/gnome/help/gnumeric/C/about-authors.xml
   /usr/share/gnome/help/gnumeric/C/about-history.xml
   /usr/share/gnome/help/gnumeric/C/about-license.xml
@@ -228,6 +350,7 @@ Files included in the binary package:
   /usr/share/gnome/help/gnumeric/C/data-entry-advanced.xml
   /usr/share/gnome/help/gnumeric/C/data-entry-external.xml
   /usr/share/gnome/help/gnumeric/C/data-entry.xml
+  /usr/share/gnome/help/gnumeric/C/data-filter.xml
   /usr/share/gnome/help/gnumeric/C/data-format.xml
   /usr/share/gnome/help/gnumeric/C/data-generate.xml
   /usr/share/gnome/help/gnumeric/C/data-insert.xml
@@ -417,7 +540,6 @@ Files included in the binary package:
   /usr/share/gnome/help/gnumeric/C/figures/files-html-example.png
   /usr/share/gnome/help/gnumeric/C/figures/files-html32-example.png
   /usr/share/gnome/help/gnumeric/C/figures/files-html40-example.png
-  /usr/share/gnome/help/gnumeric/C/figures/gnumeric-empty.510.png
   /usr/share/gnome/help/gnumeric/C/figures/gnumeric-icon-24.png
   /usr/share/gnome/help/gnumeric/C/figures/gnumeric-labelled.png
   /usr/share/gnome/help/gnumeric/C/figures/gnumeric-power-example.png
@@ -554,10 +676,7 @@ Files included in the binary package:
   /usr/share/gnome/help/gnumeric/C/figures/textguru-import-panel2a-withTags.png
   /usr/share/gnome/help/gnumeric/C/figures/textguru-import-panel2b-withTags.png
   /usr/share/gnome/help/gnumeric/C/figures/textguru-import-panel3-withTags.png
-  /usr/share/gnome/help/gnumeric/C/figures/toolbar-format.510.png
   /usr/share/gnome/help/gnumeric/C/figures/toolbar-object.png
-  /usr/share/gnome/help/gnumeric/C/figures/toolbar-standard.510.png
-  /usr/share/gnome/help/gnumeric/C/figures/toolbars.510.png
   /usr/share/gnome/help/gnumeric/C/figures/widget-checkbox.png
   /usr/share/gnome/help/gnumeric/C/figures/widget-combobox.png
   /usr/share/gnome/help/gnumeric/C/figures/widget-entryBox-outlined.png
@@ -604,109 +723,111 @@ Files included in the binary package:
   /usr/share/gnome/help/gnumeric/C/welcome.xml
   /usr/share/gnome/help/gnumeric/C/workbooks.xml
   /usr/share/gnome/help/gnumeric/C/worksheets.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/3D/.category
-  /usr/share/gnumeric/1.6.3/autoformat-templates/3D/autoformat.3D.button.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/3D/autoformat.3D.list.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Classical/.category
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Classical/autoformat.Classical.cool.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Classical/autoformat.Classical.simple.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Classical/autoformat.Classical.trendy.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Colourful/.category
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Colourful/autoformat.Colourful.banana.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Colourful/autoformat.Colourful.black.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Colourful/autoformat.Colourful.blue.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Colourful/autoformat.Colourful.orange.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Colourful/autoformat.Colourful.vanilla.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Financial/.category
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Financial/autoformat.Financial.basic.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Financial/autoformat.Financial.desert.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Financial/autoformat.Financial.ice.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Financial/autoformat.Financial.modern.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/Financial/autoformat.Financial.purple.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/General/.category
-  /usr/share/gnumeric/1.6.3/autoformat-templates/General/autoformat.General.advanced.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/General/autoformat.General.basic.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/General/autoformat.General.empty.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/General/autoformat.General.table.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/List/.category
-  /usr/share/gnumeric/1.6.3/autoformat-templates/List/autoformat.List.basic.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/List/autoformat.List.green.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/List/autoformat.List.lila.xml
-  /usr/share/gnumeric/1.6.3/autoformat-templates/List/autoformat.List.simple.xml
-  /usr/share/gnumeric/1.6.3/doc
-  /usr/share/gnumeric/1.6.3/glade/advanced-filter.glade
-  /usr/share/gnumeric/1.6.3/glade/anova-one.glade
-  /usr/share/gnumeric/1.6.3/glade/anova-two.glade
-  /usr/share/gnumeric/1.6.3/glade/autocorrect.glade
-  /usr/share/gnumeric/1.6.3/glade/autofilter-expression.glade
-  /usr/share/gnumeric/1.6.3/glade/autofilter-top10.glade
-  /usr/share/gnumeric/1.6.3/glade/autoformat.glade
-  /usr/share/gnumeric/1.6.3/glade/autosave.glade
-  /usr/share/gnumeric/1.6.3/glade/cell-comment.glade
-  /usr/share/gnumeric/1.6.3/glade/cell-format.glade
-  /usr/share/gnumeric/1.6.3/glade/cell-sort.glade
-  /usr/share/gnumeric/1.6.3/glade/col-width.glade
-  /usr/share/gnumeric/1.6.3/glade/colrow.glade
-  /usr/share/gnumeric/1.6.3/glade/consolidate.glade
-  /usr/share/gnumeric/1.6.3/glade/correlation.glade
-  /usr/share/gnumeric/1.6.3/glade/covariance.glade
-  /usr/share/gnumeric/1.6.3/glade/dao.glade
-  /usr/share/gnumeric/1.6.3/glade/define-name.glade
-  /usr/share/gnumeric/1.6.3/glade/delete-cells.glade
-  /usr/share/gnumeric/1.6.3/glade/descriptive-stats.glade
-  /usr/share/gnumeric/1.6.3/glade/dialog-stf-export.glade
-  /usr/share/gnumeric/1.6.3/glade/dialog-stf.glade
-  /usr/share/gnumeric/1.6.3/glade/dialog-zoom.glade
-  /usr/share/gnumeric/1.6.3/glade/doc-meta-data.glade
-  /usr/share/gnumeric/1.6.3/glade/exp-smoothing.glade
-  /usr/share/gnumeric/1.6.3/glade/fill-series.glade
-  /usr/share/gnumeric/1.6.3/glade/font-sel.glade
-  /usr/share/gnumeric/1.6.3/glade/formula-guru.glade
-  /usr/share/gnumeric/1.6.3/glade/fourier-analysis.glade
-  /usr/share/gnumeric/1.6.3/glade/function-select.glade
-  /usr/share/gnumeric/1.6.3/glade/goalseek.glade
-  /usr/share/gnumeric/1.6.3/glade/goto.glade
-  /usr/share/gnumeric/1.6.3/glade/hf-config.glade
-  /usr/share/gnumeric/1.6.3/glade/histogram.glade
-  /usr/share/gnumeric/1.6.3/glade/hyperlink.glade
-  /usr/share/gnumeric/1.6.3/glade/insert-cells.glade
-  /usr/share/gnumeric/1.6.3/glade/mean-tests.glade
-  /usr/share/gnumeric/1.6.3/glade/merge.glade
-  /usr/share/gnumeric/1.6.3/glade/moving-averages.glade
-  /usr/share/gnumeric/1.6.3/glade/paste-names.glade
-  /usr/share/gnumeric/1.6.3/glade/pivottable.glade
-  /usr/share/gnumeric/1.6.3/glade/plugin-manager.glade
-  /usr/share/gnumeric/1.6.3/glade/preferences.glade
-  /usr/share/gnumeric/1.6.3/glade/print.glade
-  /usr/share/gnumeric/1.6.3/glade/random-generation.glade
-  /usr/share/gnumeric/1.6.3/glade/rank.glade
-  /usr/share/gnumeric/1.6.3/glade/regression.glade
-  /usr/share/gnumeric/1.6.3/glade/row-height.glade
-  /usr/share/gnumeric/1.6.3/glade/sampling.glade
-  /usr/share/gnumeric/1.6.3/glade/scenario-add.glade
-  /usr/share/gnumeric/1.6.3/glade/scenario-manager.glade
-  /usr/share/gnumeric/1.6.3/glade/search-replace.glade
-  /usr/share/gnumeric/1.6.3/glade/search.glade
-  /usr/share/gnumeric/1.6.3/glade/sheet-order.glade
-  /usr/share/gnumeric/1.6.3/glade/shuffle.glade
-  /usr/share/gnumeric/1.6.3/glade/simulation.glade
-  /usr/share/gnumeric/1.6.3/glade/so-checkbox.glade
-  /usr/share/gnumeric/1.6.3/glade/so-frame.glade
-  /usr/share/gnumeric/1.6.3/glade/so-scrollbar.glade
-  /usr/share/gnumeric/1.6.3/glade/solver.glade
-  /usr/share/gnumeric/1.6.3/glade/summary.glade
-  /usr/share/gnumeric/1.6.3/glade/tabulate.glade
-  /usr/share/gnumeric/1.6.3/glade/variance-tests.glade
-  /usr/share/gnumeric/1.6.3/glade/view.glade
-  /usr/share/gnumeric/1.6.3/glade/workbook-attr.glade
-  /usr/share/gnumeric/1.6.3/GNOME_Gnumeric-gtk.xml
-  /usr/share/gnumeric/1.6.3/idl/GNOME_Gnumeric.idl
-  /usr/share/gnumeric/1.6.3/templates/invoice.gnumeric
-  /usr/share/gnumeric/1.6.3/templates/loan.gnumeric
-  /usr/share/gnumeric/1.6.3/templates/mileage.gnumeric
-  /usr/share/gnumeric/1.6.3/templates/purchase_order.gnumeric
+  /usr/share/gnumeric/1.8.0/GNOME_Gnumeric-gtk.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/3D/.category
+  /usr/share/gnumeric/1.8.0/autoformat-templates/3D/autoformat.3D.button.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/3D/autoformat.3D.list.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Classical/.category
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Classical/autoformat.Classical.cool.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Classical/autoformat.Classical.simple.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Classical/autoformat.Classical.trendy.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Colourful/.category
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Colourful/autoformat.Colourful.banana.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Colourful/autoformat.Colourful.black.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Colourful/autoformat.Colourful.blue.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Colourful/autoformat.Colourful.orange.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Colourful/autoformat.Colourful.vanilla.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Financial/.category
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Financial/autoformat.Financial.basic.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Financial/autoformat.Financial.desert.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Financial/autoformat.Financial.ice.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Financial/autoformat.Financial.modern.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/Financial/autoformat.Financial.purple.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/General/.category
+  /usr/share/gnumeric/1.8.0/autoformat-templates/General/autoformat.General.advanced.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/General/autoformat.General.basic.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/General/autoformat.General.empty.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/General/autoformat.General.table.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/List/.category
+  /usr/share/gnumeric/1.8.0/autoformat-templates/List/autoformat.List.basic.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/List/autoformat.List.green.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/List/autoformat.List.lila.xml
+  /usr/share/gnumeric/1.8.0/autoformat-templates/List/autoformat.List.simple.xml
+  /usr/share/gnumeric/1.8.0/glade/advanced-filter.glade
+  /usr/share/gnumeric/1.8.0/glade/anova-one.glade
+  /usr/share/gnumeric/1.8.0/glade/anova-two.glade
+  /usr/share/gnumeric/1.8.0/glade/autocorrect.glade
+  /usr/share/gnumeric/1.8.0/glade/autofilter-expression.glade
+  /usr/share/gnumeric/1.8.0/glade/autofilter-top10.glade
+  /usr/share/gnumeric/1.8.0/glade/autoformat.glade
+  /usr/share/gnumeric/1.8.0/glade/autosave.glade
+  /usr/share/gnumeric/1.8.0/glade/cell-comment.glade
+  /usr/share/gnumeric/1.8.0/glade/cell-format.glade
+  /usr/share/gnumeric/1.8.0/glade/cell-sort.glade
+  /usr/share/gnumeric/1.8.0/glade/col-width.glade
+  /usr/share/gnumeric/1.8.0/glade/colrow.glade
+  /usr/share/gnumeric/1.8.0/glade/consolidate.glade
+  /usr/share/gnumeric/1.8.0/glade/correlation.glade
+  /usr/share/gnumeric/1.8.0/glade/covariance.glade
+  /usr/share/gnumeric/1.8.0/glade/dao.glade
+  /usr/share/gnumeric/1.8.0/glade/data-table.glade
+  /usr/share/gnumeric/1.8.0/glade/define-name.glade
+  /usr/share/gnumeric/1.8.0/glade/delete-cells.glade
+  /usr/share/gnumeric/1.8.0/glade/descriptive-stats.glade
+  /usr/share/gnumeric/1.8.0/glade/dialog-stf-export.glade
+  /usr/share/gnumeric/1.8.0/glade/dialog-stf.glade
+  /usr/share/gnumeric/1.8.0/glade/dialog-zoom.glade
+  /usr/share/gnumeric/1.8.0/glade/doc-meta-data.glade
+  /usr/share/gnumeric/1.8.0/glade/exp-smoothing.glade
+  /usr/share/gnumeric/1.8.0/glade/fill-series.glade
+  /usr/share/gnumeric/1.8.0/glade/font-sel.glade
+  /usr/share/gnumeric/1.8.0/glade/formula-guru.glade
+  /usr/share/gnumeric/1.8.0/glade/fourier-analysis.glade
+  /usr/share/gnumeric/1.8.0/glade/function-select.glade
+  /usr/share/gnumeric/1.8.0/glade/goalseek.glade
+  /usr/share/gnumeric/1.8.0/glade/goto.glade
+  /usr/share/gnumeric/1.8.0/glade/hf-config.glade
+  /usr/share/gnumeric/1.8.0/glade/hf-dt-format.glade
+  /usr/share/gnumeric/1.8.0/glade/histogram.glade
+  /usr/share/gnumeric/1.8.0/glade/hyperlink.glade
+  /usr/share/gnumeric/1.8.0/glade/insert-cells.glade
+  /usr/share/gnumeric/1.8.0/glade/mean-tests.glade
+  /usr/share/gnumeric/1.8.0/glade/merge.glade
+  /usr/share/gnumeric/1.8.0/glade/moving-averages.glade
+  /usr/share/gnumeric/1.8.0/glade/paste-names.glade
+  /usr/share/gnumeric/1.8.0/glade/plugin-manager.glade
+  /usr/share/gnumeric/1.8.0/glade/preferences.glade
+  /usr/share/gnumeric/1.8.0/glade/print.glade
+  /usr/share/gnumeric/1.8.0/glade/random-generation.glade
+  /usr/share/gnumeric/1.8.0/glade/rank.glade
+  /usr/share/gnumeric/1.8.0/glade/regression.glade
+  /usr/share/gnumeric/1.8.0/glade/row-height.glade
+  /usr/share/gnumeric/1.8.0/glade/sampling.glade
+  /usr/share/gnumeric/1.8.0/glade/scenario-add.glade
+  /usr/share/gnumeric/1.8.0/glade/scenario-manager.glade
+  /usr/share/gnumeric/1.8.0/glade/search-replace.glade
+  /usr/share/gnumeric/1.8.0/glade/search.glade
+  /usr/share/gnumeric/1.8.0/glade/sheet-order.glade
+  /usr/share/gnumeric/1.8.0/glade/shuffle.glade
+  /usr/share/gnumeric/1.8.0/glade/simulation.glade
+  /usr/share/gnumeric/1.8.0/glade/so-checkbox.glade
+  /usr/share/gnumeric/1.8.0/glade/so-frame.glade
+  /usr/share/gnumeric/1.8.0/glade/so-list.glade
+  /usr/share/gnumeric/1.8.0/glade/so-scrollbar.glade
+  /usr/share/gnumeric/1.8.0/glade/solver.glade
+  /usr/share/gnumeric/1.8.0/glade/tabulate.glade
+  /usr/share/gnumeric/1.8.0/glade/variance-tests.glade
+  /usr/share/gnumeric/1.8.0/glade/view.glade
+  /usr/share/gnumeric/1.8.0/glade/workbook-attr.glade
+  /usr/share/gnumeric/1.8.0/idl/GNOME_Gnumeric.idl
+  /usr/share/gnumeric/1.8.0/templates/invoice.gnumeric
+  /usr/share/gnumeric/1.8.0/templates/loan.gnumeric
+  /usr/share/gnumeric/1.8.0/templates/mileage.gnumeric
+  /usr/share/gnumeric/1.8.0/templates/purchase_order.gnumeric
   /usr/share/locale/am/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/am/LC_MESSAGES/gnumeric.mo
+  /usr/share/locale/ar/LC_MESSAGES/gnumeric-functions.mo
+  /usr/share/locale/ar/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/az/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/az/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/bg/LC_MESSAGES/gnumeric-functions.mo
@@ -719,6 +840,8 @@ Files included in the binary package:
   /usr/share/locale/da/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/de/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/de/LC_MESSAGES/gnumeric.mo
+  /usr/share/locale/dz/LC_MESSAGES/gnumeric-functions.mo
+  /usr/share/locale/dz/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/el/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/el/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/en_CA/LC_MESSAGES/gnumeric-functions.mo
@@ -753,6 +876,8 @@ Files included in the binary package:
   /usr/share/locale/lt/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/lv/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/lv/LC_MESSAGES/gnumeric.mo
+  /usr/share/locale/mk/LC_MESSAGES/gnumeric-functions.mo
+  /usr/share/locale/mk/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/ml/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/ml/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/mr/LC_MESSAGES/gnumeric-functions.mo
@@ -761,12 +886,14 @@ Files included in the binary package:
   /usr/share/locale/ms/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/nb/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/nb/LC_MESSAGES/gnumeric.mo
+  /usr/share/locale/ne/LC_MESSAGES/gnumeric-functions.mo
+  /usr/share/locale/ne/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/nl/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/nl/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/nn/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/nn/LC_MESSAGES/gnumeric.mo
-  /usr/share/locale/no/LC_MESSAGES/gnumeric-functions.mo
-  /usr/share/locale/no/LC_MESSAGES/gnumeric.mo
+  /usr/share/locale/oc/LC_MESSAGES/gnumeric-functions.mo
+  /usr/share/locale/oc/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/pl/LC_MESSAGES/gnumeric-functions.mo
   /usr/share/locale/pl/LC_MESSAGES/gnumeric.mo
   /usr/share/locale/pt/LC_MESSAGES/gnumeric-functions.mo
@@ -802,9 +929,6 @@ Files included in the binary package:
   /usr/share/man/man1/gnumeric.1.gz
   /usr/share/man/man1/ssconvert.1.gz
   /usr/share/man/man1/ssindex.1.gz
-  /usr/share/mc/templates/gnumeric.desktop
-  /usr/share/mime-info/gnumeric.keys
-  /usr/share/mime-info/gnumeric.mime
   /usr/share/omf/gnumeric/gnumeric-C.omf
   /usr/share/pixmaps/gnome-application-vnd.lotus-1-2-3.png
   /usr/share/pixmaps/gnome-application-x-applix-spreadsheet.png
@@ -830,6 +954,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 1.8.0-1 -----
+Major version bump.
 
 ----- version 1.6.3-2 -----
 Rebuilt for python-2.5 and other dependencies.
