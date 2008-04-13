@@ -1,5 +1,5 @@
 category: Gnome Math
-requires: cygwin GConf2 ORBit2 atk glib2 gdk-pixbuf2 gnome-vfs2 gtk2-x11 libbonobo2 libbonoboui2 libcairo2 libglade2 libgnome2 libgnomeui2 libgoffice06 libgsf114 libintl8 libpx0 libxml2 pango python python-gobject2 python-gtk2 zlib
+requires: cygwin GConf2 ORBit2 atk glib2 gdk-pixbuf2 gnome-vfs2 gtk2-x11 libbonobo2 libbonoboui2 libcairo2 libgda30 libglade2 libgnome2 libgnomedb30 libgnomeui2 libgoffice06 libgsf114 libintl8 libpsiconv6 libpx0 libxml2 pango python python-gobject2 python-gtk2 zlib
 sdesc: "GNOME Office Spreadsheet"
 ldesc: "The Gnumeric spreadsheet is part of the GNOME desktop 
 environment -- a project to create a free, user friendly desktop 

@@ -20,12 +20,15 @@ Runtime requirements:
   libbonobo2-2.20.4-1
   libbonoboui2-2.20.0-1
   libcairo2-1.4.14-1
+  libgda30-3.0.4-1
   libglade2-2.6.2-1
   libgnome2-2.20.1.1-1
+  libgnomedb30-3.0.0-2
   libgnomeui2-2.20.1.1-1
   libgoffice06-0.6.2-1
   libgsf114-1.14.8-1
   libintl8-0.15-1
+  libpsiconv6-0.9.8-1
   libpx0-0.6.3-1
   libxml2-2.6.30-1
   pango-1.18.4-1
@@ -39,12 +42,12 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.3.8-1
+  cygport-0.3.9-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gnome-common-2.20.0-1
   intltool-0.36.3-1
-  libtool1.5-1.5.23a-2
+  libtool-2.2.2-2
   make-3.81-1
   pkg-config-0.21-1
   rarian-0.6.0-1
@@ -260,6 +263,13 @@ Files included in the binary package:
   /usr/lib/gnumeric/1.8.2/plugins/fn-tsa/plugin.dll
   /usr/lib/gnumeric/1.8.2/plugins/fn-tsa/plugin.la
   /usr/lib/gnumeric/1.8.2/plugins/fn-tsa/plugin.xml
+  /usr/lib/gnumeric/1.8.2/plugins/gdaif/gdaif.dll
+  /usr/lib/gnumeric/1.8.2/plugins/gdaif/gdaif.la
+  /usr/lib/gnumeric/1.8.2/plugins/gdaif/plugin.xml
+  /usr/lib/gnumeric/1.8.2/plugins/gnome-db/gnomedb.dll
+  /usr/lib/gnumeric/1.8.2/plugins/gnome-db/gnomedb.la
+  /usr/lib/gnumeric/1.8.2/plugins/gnome-db/plugin.xml
+  /usr/lib/gnumeric/1.8.2/plugins/gnome-db/ui.xml
   /usr/lib/gnumeric/1.8.2/plugins/gnome-glossary/glossary-po-header
   /usr/lib/gnumeric/1.8.2/plugins/gnome-glossary/gnome_glossary.py
   /usr/lib/gnumeric/1.8.2/plugins/gnome-glossary/plugin.xml
@@ -287,6 +297,9 @@ Files included in the binary package:
   /usr/lib/gnumeric/1.8.2/plugins/plan_perfect/plan_perfect.dll
   /usr/lib/gnumeric/1.8.2/plugins/plan_perfect/plan_perfect.la
   /usr/lib/gnumeric/1.8.2/plugins/plan_perfect/plugin.xml
+  /usr/lib/gnumeric/1.8.2/plugins/psiconv/plugin.xml
+  /usr/lib/gnumeric/1.8.2/plugins/psiconv/psiconv.dll
+  /usr/lib/gnumeric/1.8.2/plugins/psiconv/psiconv.la
   /usr/lib/gnumeric/1.8.2/plugins/py-func/plugin.xml
   /usr/lib/gnumeric/1.8.2/plugins/py-func/py_func.py
   /usr/lib/gnumeric/1.8.2/plugins/python-loader/plugin.xml
@@ -953,6 +966,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 1.8.2-1 -----
+Enabled GDA and Psiconv support.
 
 ----- version 1.8.2-1 -----
 Version bump.
