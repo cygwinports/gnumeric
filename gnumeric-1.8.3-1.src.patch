@@ -1,0 +1,132 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x gnumeric-config.h.in origsrc/gnumeric-1.8.3/configure.in src/gnumeric-1.8.3/configure.in
+--- origsrc/gnumeric-1.8.3/configure.in	2008-04-11 06:00:07.000000000 -0500
++++ src/gnumeric-1.8.3/configure.in	2008-05-26 09:23:20.671875000 -0500
+@@ -272,11 +272,19 @@
+ mingw* | pw32* | cygwin*)
+     with_win32=yes
+     GNUMERIC_PLUGIN_LDFLAGS="-no-undefined $GNUMERIC_LIBS -Wl,--enable-runtime-pseudo-relo,--export-all-symbols \$(top_builddir)/src/libspreadsheet.la -s"
++    ;;
++esac
++
++with_native_win32=no
++case $host_os in
++mingw* | pw32*)
++    with_native_win32=yes
+     AC_ARG_VAR(WINDRES, [The windres executable (used by win32 builds only).])
+     AC_CHECK_TOOL(WINDRES, windres, :)
+     ;;
+ esac
+ AM_CONDITIONAL(WITH_WIN32, test $with_win32 = yes)
++AM_CONDITIONAL(WITH_NATIVE_WIN32, test $with_native_win32 = yes)
+ AM_CONDITIONAL(CROSS_COMPILING, test x"$cross_compiling" != "xno")
+ 
+ GNUMERIC_PLUGIN_LDFLAGS="-avoid-version $GNUMERIC_PLUGIN_LDFLAGS"
+@@ -425,11 +433,11 @@
+ 	fi
+ )
+ if test "$try_gda" = "true"; then
+-	PKG_CHECK_MODULES(GDA, [libgda-3.0 >= 3.1.1],
++	PKG_CHECK_MODULES(GDA, [libgda-3.0 >= 3.0.2],
+ 		[gda_msg=yes],
+ 		[gda_msg="NO.  libgda problem"])
+ 	if test "$gda_msg" = "yes"; then
+-		PKG_CHECK_MODULES(GNOMEDB, [libgnomedb-3.0 >= 3.0.1],
++		PKG_CHECK_MODULES(GNOMEDB, [libgnomedb-3.0 >= 3.0.0],
+ 			[gnomedb_msg="yes"],
+ 			[gnomedb_msg="NO. libgnomedb problem"])
+ 		if test "$gnomedb_msg" = "yes"; then
+@@ -908,7 +916,7 @@
+      major_ver=`$PYTHON -c 'import sys ; sys.stdout.write(sys.version[0:1])'`]
+     if test "x$major_ver" = "x2"; then
+ 	AC_MSG_RESULT(yes)
+-	if test "x$with_win32" = "xyes" ; then
++	if test "x$with_native_win32" = "xyes" ; then
+ 	    # 2.x on linux, 2x on win32
+ 	    PY_VERSION=`echo $PY_VERSION | sed -e 's/\\.//'`
+ 	fi
+@@ -923,7 +931,7 @@
+ 	PY_PREFIX=`$PYTHON -c 'import sys ; sys.stdout.write(sys.prefix)'`
+     fi
+     if test "x$PY_INCLUDE_DIR" = x; then
+-	if test "x$with_win32" = "xyes" ; then
++	if test "x$with_native_win32" = "xyes" ; then
+ 	    PY_INCLUDE_DIR="$PY_PREFIX/include"
+ 	else
+ 	    PY_INCLUDE_DIR=`$PYTHON -c 'import sys ; import distutils.sysconfig ; sys.stdout.write(distutils.sysconfig.get_python_inc())'`
+@@ -948,7 +956,7 @@
+ AM_CONDITIONAL(WITH_PYTHON, test "x$python_msg" = xyes)
+ if test "x$python_msg" = xyes; then
+     if test "x$PY_LIB_DIR" = x; then
+-	if test "x$with_win32" = "xyes" ; then
++	if test "x$with_native_win32" = "xyes" ; then
+ 	    PY_LIB_DIR="$PY_PREFIX/libs"
+ 	else
+ 	    PY_LIB_DIR=`$PYTHON -c 'import sys ; import distutils.sysconfig ; sys.stdout.write(distutils.sysconfig.get_config_var("LIBPL"))'`
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x gnumeric-config.h.in origsrc/gnumeric-1.8.3/libspreadsheet.pc.in src/gnumeric-1.8.3/libspreadsheet.pc.in
+--- origsrc/gnumeric-1.8.3/libspreadsheet.pc.in	2008-04-24 17:43:23.000000000 -0500
++++ src/gnumeric-1.8.3/libspreadsheet.pc.in	2008-05-26 09:23:20.687500000 -0500
+@@ -7,12 +7,12 @@
+ libgoffice=@LIBGOFFICE@
+ 
+ Name: libspreadsheet
+-Description: The spreadsheet internals of Gnumeric (DEVELOPMENT VERSION)
++Description: The spreadsheet internals of Gnumeric
+ Version: @VERSION@
+ URL: http://www.gnumeric.org
+ Requires: glib-2.0 gobject-2.0 libgsf-1 libxml-2.0 gtk+-2.0 libglade-2.0 @LIBGOFFICE@
+ Requires.private: libart-2.0
+-Libs: -L${libdir} -lspreadsheet-@GNUMERIC_API_VER@ @GTK_EXTRA_LIBS@
++Libs: -L${libdir} -lspreadsheet
+ 
+ # for now include both the directory and the child, until we rename the includes in svn
+ Cflags: -I${includedir}/libspreadsheet-@GNUMERIC_API_VER@/spreadsheet -I${includedir}/libspreadsheet-@GNUMERIC_API_VER@ -I${gnumeric_libdir}/include
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x gnumeric-config.h.in origsrc/gnumeric-1.8.3/schemas/Makefile.am src/gnumeric-1.8.3/schemas/Makefile.am
+--- origsrc/gnumeric-1.8.3/schemas/Makefile.am	2008-01-14 17:54:25.000000000 -0600
++++ src/gnumeric-1.8.3/schemas/Makefile.am	2008-05-26 09:23:20.703125000 -0500
+@@ -21,7 +21,7 @@
+ install-data-local:
+ endif
+ 
+-if WITH_WIN32
++if WITH_NATIVE_WIN32
+ SUFFIXES = .schemas.in .reg .hkcu.reg
+ regdir = $(prefix)/etc/win32/reg
+ reg_DATA = $(schema_in_files:.schemas.in=.reg) $(schema_in_files:.schemas.in=.hkcu.reg)
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x gnumeric-config.h.in origsrc/gnumeric-1.8.3/src/Makefile.am src/gnumeric-1.8.3/src/Makefile.am
+--- origsrc/gnumeric-1.8.3/src/Makefile.am	2008-01-14 17:54:39.000000000 -0600
++++ src/gnumeric-1.8.3/src/Makefile.am	2008-05-26 09:23:20.703125000 -0500
+@@ -292,10 +292,12 @@
+ 
+ gnumeric_LDFLAGS = -export-dynamic
+ 
+-if WITH_WIN32
++if WITH_NATIVE_WIN32
+     gnumeric_LDADD += gnumeric_rc.o
+     gnumeric_LDFLAGS += -mwindows
++endif
+ 
++if WITH_WIN32
+     libspreadsheet_la_DEPENDENCIES = libspreadsheet.def
+     libspreadsheet_la_LDFLAGS += -no-undefined -export-symbols libspreadsheet.def
+ 
+@@ -390,7 +392,7 @@
+ 	echo '#endif /* GNUMERIC_PATHS_H */'; \
+ 	) >$@
+ 
+-if WITH_WIN32
++if WITH_NATIVE_WIN32
+ gnumeric_rc.o: gnumeric.rc
+ 	$(WINDRES) -DVERSION=$(VERSION) -DVERSION_NUMBER=`echo $(VERSION).0.0.0 | sed 's/\([0-9]*\)[^.]*\.*\([0-9]*\)[^.]*\.*\([0-9]*\)[^.]*\.*\([0-9]*\).*/\1,\2,\3,\4/'` --include-dir $(srcdir) -i $< -o $@
+ install-exec-hook:
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x gnumeric-config.h.in origsrc/gnumeric-1.8.3/tools/Makefile.am src/gnumeric-1.8.3/tools/Makefile.am
+--- origsrc/gnumeric-1.8.3/tools/Makefile.am	2008-03-12 21:30:16.000000000 -0500
++++ src/gnumeric-1.8.3/tools/Makefile.am	2008-05-26 09:23:20.718750000 -0500
+@@ -5,7 +5,7 @@
+ AM_CPPFLAGS = $(GNUMERIC_CFLAGS) -DGNUMERIC_INTERNAL
+ 
+ noinst_PROGRAMS =
+-if WITH_WIN32
++if WITH_NATIVE_WIN32
+     noinst_PROGRAMS += gconf-schemas-to-win32-reg
+     gconf_schemas_to_win32_reg_SOURCES = gconf-schemas-to-win32-reg.c
+     gconf_schemas_to_win32_reg_LDADD = $(GNUMERIC_LIBS)
