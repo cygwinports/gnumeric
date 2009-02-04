@@ -20,20 +20,6 @@
  AM_CONDITIONAL(CROSS_COMPILING, test x"$cross_compiling" != "xno")
  
  GNUMERIC_PLUGIN_LDFLAGS="-avoid-version $GNUMERIC_PLUGIN_LDFLAGS"
-@@ -425,11 +433,11 @@
- 	fi
- )
- if test "$try_gda" = "true"; then
--	PKG_CHECK_MODULES(GDA, [libgda-3.0 >= 3.1.1],
-+	PKG_CHECK_MODULES(GDA, [libgda-3.0 >= 3.0.2],
- 		[gda_msg=yes],
- 		[gda_msg="NO.  libgda problem"])
- 	if test "$gda_msg" = "yes"; then
--		PKG_CHECK_MODULES(GNOMEDB, [libgnomedb-3.0 >= 3.0.1],
-+		PKG_CHECK_MODULES(GNOMEDB, [libgnomedb-3.0 >= 3.0.0],
- 			[gnomedb_msg="yes"],
- 			[gnomedb_msg="NO. libgnomedb problem"])
- 		if test "$gnomedb_msg" = "yes"; then
 @@ -908,7 +916,7 @@
       major_ver=`$PYTHON -c 'import sys ; sys.stdout.write(sys.version[0:1])'`]
      if test "x$major_ver" = "x2"; then
@@ -61,23 +47,6 @@
  	    PY_LIB_DIR="$PY_PREFIX/libs"
  	else
  	    PY_LIB_DIR=`$PYTHON -c 'import sys ; import distutils.sysconfig ; sys.stdout.write(distutils.sysconfig.get_config_var("LIBPL"))'`
---- origsrc/gnumeric-1.8.3/libspreadsheet.pc.in	2008-04-24 17:43:23.000000000 -0500
-+++ src/gnumeric-1.8.3/libspreadsheet.pc.in	2008-05-26 09:23:20.687500000 -0500
-@@ -7,12 +7,12 @@
- libgoffice=@LIBGOFFICE@
- 
- Name: libspreadsheet
--Description: The spreadsheet internals of Gnumeric (DEVELOPMENT VERSION)
-+Description: The spreadsheet internals of Gnumeric
- Version: @VERSION@
- URL: http://www.gnumeric.org
- Requires: glib-2.0 gobject-2.0 libgsf-1 libxml-2.0 gtk+-2.0 libglade-2.0 @LIBGOFFICE@
- Requires.private: libart-2.0
--Libs: -L${libdir} -lspreadsheet-@GNUMERIC_API_VER@ @GTK_EXTRA_LIBS@
-+Libs: -L${libdir} -lspreadsheet
- 
- # for now include both the directory and the child, until we rename the includes in svn
- Cflags: -I${includedir}/libspreadsheet-@GNUMERIC_API_VER@/spreadsheet -I${includedir}/libspreadsheet-@GNUMERIC_API_VER@ -I${gnumeric_libdir}/include
 --- origsrc/gnumeric-1.8.3/schemas/Makefile.am	2008-01-14 17:54:25.000000000 -0600
 +++ src/gnumeric-1.8.3/schemas/Makefile.am	2008-05-26 09:23:20.703125000 -0500
 @@ -21,7 +21,7 @@

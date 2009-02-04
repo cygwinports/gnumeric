@@ -1,0 +1,16 @@
+--- origsrc/gnumeric-1.8.3/configure.in	2008-04-11 06:00:07.000000000 -0500
++++ src/gnumeric-1.8.3/configure.in	2008-05-26 09:23:20.671875000 -0500
+@@ -425,11 +425,11 @@
+ 	fi
+ )
+ if test "$try_gda" = "true"; then
+-	PKG_CHECK_MODULES(GDA, [libgda-3.0 >= 3.1.1],
++	PKG_CHECK_MODULES(GDA, [libgda-3.0 >= 3.0.2],
+ 		[gda_msg=yes],
+ 		[gda_msg="NO.  libgda problem"])
+ 	if test "$gda_msg" = "yes"; then
+-		PKG_CHECK_MODULES(GNOMEDB, [libgnomedb-3.0 >= 3.0.1],
++		PKG_CHECK_MODULES(GNOMEDB, [libgnomedb-3.0 >= 3.0.0],
+ 			[gnomedb_msg="yes"],
+ 			[gnomedb_msg="NO. libgnomedb problem"])
+ 		if test "$gnomedb_msg" = "yes"; then
