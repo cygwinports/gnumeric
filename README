@@ -9,49 +9,50 @@ files saved with other spreadsheets and we offer a customizable feel
 that attempts to minimize the costs of transition.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libatk1.0_0-1.24.0-1
-  libbonobo2_0-2.24.0-1
-  libbonoboui2_0-2.24.0-1
-  libcairo2-1.8.6-1
-  libgconf2_4-2.24.0-1
-  libgda3.0_3-3.0.4-2
-  libgdk_pixbuf2.0_0-2.14.7-1
-  libglade2.0_0-2.6.3-2
-  libglib2.0_0-2.18.4-1
-  libgnome2_0-2.24.1-1
-  libgnomedb3.0_4-3.0.0-3
-  libgnomeui2_0-2.24.0-1
-  libgnomevfs2_0-2.24.0-1
-  libgoffice0.6_6-0.6.6-1
-  libgsf1_114-1.14.11-1
-  libgtk2.0_0-2.14.7-1
-  libintl8-0.17-2
-  libORBit2_0-2.14.16-1
-  libpango1.0_0-1.22.4-1
-  libpsiconv6-0.9.8-1
-  libpx0-0.6.3-1
-  libxml2-2.7.3-1
+  cygwin-1.7.0-45
+  libatk1.0_0-1.26.0-1
+  libbonobo2_0-2.24.1-1
+  libbonoboui2_0-2.24.1-1
+  libcairo2-1.8.6-10
+  libgcc1-4.3.2-2
+  libgconf2_4-2.26.0-1
+  libgda3.0_3-3.0.4-10
+  libgdk_pixbuf2.0_0-2.16.1-1
+  libglade2.0_0-2.6.4-1
+  libglib2.0_0-2.20.1-1
+  libgnome2_0-2.26.0-1
+  libgnomedb3.0_4-3.0.0-10
+  libgnomeui2_0-2.24.1-1
+  libgnomevfs2_0-2.26.0-1
+  libgoffice0.6_6-0.6.6-10
+  libgsf1_114-1.14.12-1
+  libgtk2.0_0-2.16.1-1
+  libintl8-0.17-10
+  libORBit2_0-2.14.17-1
+  libpango1.0_0-1.24.1-1
+  libpsiconv6-0.9.8-10
+  libpx0-0.6.3-10
+  libxml2-2.7.3-10
   perl-5.10.0-5
-  python-2.5.4-1
-  python-gobject2-2.16.0-1
-  python-gtk2-2.14.0-1
-  zlib-1.2.3-2
+  python-2.5.4-10
+  python-gobject2-2.16.1-10
+  python-gtk2-2.14.1-10
+  zlib0-1.2.3-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gnome-common-2.24.0-1
-  intltool-0.40.5-1
-  libtool-2.2.6a-1
-  make-3.81-1
-  pkg-config-0.23a-2
-  rarian-0.8.1-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gnome-common-2.26.0-1
+  intltool-0.40.6-1
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
+  rarian-0.8.1-10
   sed-4.1.5-2
 
 Canonical homepage:
@@ -216,15 +217,14 @@ Files included in the binary package:
   /usr/lib/gnumeric/1.8.4/plugins/xbase/xbase.dll
   /usr/lib/gnumeric/1.8.4/plugins/xbase/xbase.la
   /usr/share/applications/gnumeric.desktop
-  /usr/share/doc/gnumeric-1.8.4/AUTHORS
-  /usr/share/doc/gnumeric-1.8.4/BUGS
-  /usr/share/doc/gnumeric-1.8.4/COPYING
-  /usr/share/doc/gnumeric-1.8.4/ChangeLog
-  /usr/share/doc/gnumeric-1.8.4/HACKING
-  /usr/share/doc/gnumeric-1.8.4/INSTALL
-  /usr/share/doc/gnumeric-1.8.4/MAINTAINERS
-  /usr/share/doc/gnumeric-1.8.4/NEWS
-  /usr/share/doc/gnumeric-1.8.4/README
+  /usr/share/doc/gnumeric/AUTHORS
+  /usr/share/doc/gnumeric/BUGS
+  /usr/share/doc/gnumeric/COPYING
+  /usr/share/doc/gnumeric/ChangeLog
+  /usr/share/doc/gnumeric/HACKING
+  /usr/share/doc/gnumeric/MAINTAINERS
+  /usr/share/doc/gnumeric/NEWS
+  /usr/share/doc/gnumeric/README
   /usr/share/gnome/help/gnumeric/C/about-authors.xml
   /usr/share/gnome/help/gnumeric/C/about-history.xml
   /usr/share/gnome/help/gnumeric/C/about-license.xml
@@ -976,40 +976,8 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 1.8.4-1 -----
-Version bump.  Enabled Perl loader.
-
------ version 1.8.3-1 -----
-Version bump.
-
------ version 1.8.2-2 -----
-Enabled GDA and Psiconv support.
-
------ version 1.8.2-1 -----
-Version bump.
-
------ version 1.8.1-1 -----
-Version bump.
-
------ version 1.8.0-1 -----
-Major version bump.
-
------ version 1.6.3-2 -----
-Rebuilt for python-2.5 and other dependencies.
-
------ version 1.6.3-1 -----
-Version bump.
-
------ version 1.6.2-1 -----
-Version bump.
-
------ version 1.4.3-1 -----
-Version bump.
-Includes patches for libgsf-1.12 support and a fix for a security 
-vulnerability in the included libpcre, from Gentoo ebuild 1.4.3-r2.
-
------ version 1.4.2-1 -----
-Initial release for Cygwin.
+----- version 1.8.4-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
