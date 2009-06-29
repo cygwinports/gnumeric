@@ -1,5 +1,5 @@
 category: Gnome Math
-requires: cygwin gnumeric libatk1.0-devel libbonobo2-devel libcairo-devel libgconf2-devel libgdk_pixbuf2.0-devel libglade2.0-devel libglib2.0-devel libgnomeui2-devel libgnomevfs2-devel libgoffice0.6-devel libgsf1-devel libgtk2.0-devel gettext libpango1.0-devel libxml2-devel
+requires: gnumeric libatk1.0-devel libbonobo2-devel libcairo-devel libgconf2-devel libgdk_pixbuf2.0-devel libglade2.0-devel libglib2.0-devel libgnomeui2-devel libgnomevfs2-devel libgoffice0.6-devel libgsf1-devel libgtk2.0-devel gettext libpango1.0-devel libxml2-devel
 external-source: gnumeric
 sdesc: "GNOME Office Spreadsheet (plugin development)"
 ldesc: "The Gnumeric spreadsheet is part of the GNOME desktop 
