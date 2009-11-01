@@ -1,0 +1,11 @@
+--- origsrc/gnumeric-1.9.14/libspreadsheet.pc.in	2009-05-18 21:04:09.000000000 -0500
++++ src/gnumeric-1.9.14/libspreadsheet.pc.in	2009-10-30 16:19:09.205671200 -0500
+@@ -14,7 +14,7 @@ Version: @VERSION@
+ URL: http://www.gnumeric.org
+ Requires: glib-2.0 gobject-2.0 libgsf-1 libxml-2.0 gtk+-2.0 libglade-2.0 ${libgoffice}
+ Requires.private:
+-Libs: -L${libdir} -lspreadsheet-${VERSION}
++Libs: -L${libdir} -lspreadsheet
+ 
+ # for now include both the directory and the child, until we rename the includes in svn
+ Cflags: -I${includedir}/libspreadsheet-@GNUMERIC_API_VER@/spreadsheet -I${includedir}/libspreadsheet-@GNUMERIC_API_VER@ -I${gnumeric_libdir}/include

@@ -4,22 +4,20 @@ DESCRIPTION="GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 
 PATCH_URI="
-	1.8.3-not-win32.patch
-	1.8.3-libgda30.patch
-	1.8.3-pkgconfig.patch
+	1.9.14-not-win32.patch
+	1.9.14-pkgconfig.patch
 "
 
 PKG_NAMES="${PN} ${PN}-devel"
 PKG_HINTS="setup devel"
-gnumeric_CONTENTS="etc/ usr/bin/ usr/lib/${PN}/${PV}/plugins/ usr/share/"
-gnumeric_devel_CONTENTS="usr/include/ usr/lib/${PN}/${PV}/include/
-                         usr/lib/libspreadsheet.* usr/lib/pkgconfig/"
+gnumeric_CONTENTS="etc/ usr/bin/ usr/lib/${PN}/${PV}/plugins/ usr/lib/goffice/ usr/share/"
+gnumeric_devel_CONTENTS="usr/include/ usr/lib/libspreadsheet.* usr/lib/pkgconfig/"
 
 DIFF_EXCLUDES="gnumeric-config.h.in"
 
 CYGCONF_ARGS="
 	--with-gda
-	--with-gnome
+	--without-gnome
 	--with-paradox
 	--with-perl
 	--with-psiconv
