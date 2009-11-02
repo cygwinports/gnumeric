@@ -17,7 +17,7 @@ Runtime requirements:
   libgdk_pixbuf2.0_0-2.18.3-1
   libglade2.0_0-2.6.4-1
   libglib2.0_0-2.22.2-1
-  libgoffice0.8_7-0.7.14-1
+  libgoffice0.8_7-0.7.15-1
   libgsf1_114-1.14.16-1
   libgtk2.0_0-2.18.3-1
   libintl8-0.17-11
@@ -54,22 +54,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnumeric-1.9.14-X-src.tar.bz2
+  unpack gnumeric-1.9.15-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gnumeric-1.9.14-X.cygport all
+  cygport ./gnumeric-1.9.15-X.cygport all
 
 This will create:
-  /usr/src/gnumeric-1.9.14-X-src.tar.bz2
-  /usr/src/gnumeric-1.9.14-X.tar.bz2
-  /usr/src/gnumeric-devel-1.9.14-X.tar.bz2
+  /usr/src/gnumeric-1.9.15-X-src.tar.bz2
+  /usr/src/gnumeric-1.9.15-X.tar.bz2
+  /usr/src/gnumeric-devel-1.9.15-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
 
------ version 1.9.14-1 -----
+----- version 1.9.15-1 -----
 Version bump.
 
 ----- version 1.8.4-10 -----
