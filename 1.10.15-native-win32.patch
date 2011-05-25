@@ -1,6 +1,6 @@
---- origsrc/gnumeric-1.10.7/configure.in	2010-06-30 23:27:07.727116900 -0500
-+++ src/gnumeric-1.10.7/configure.in	2010-06-30 19:18:55.000000000 -0500
-@@ -185,6 +185,18 @@ mingw* | pw32* | cygwin*)
+--- origsrc/gnumeric-1.10.15/configure.in	2011-05-02 18:27:14.000000000 -0500
++++ src/gnumeric-1.10.15/configure.in	2011-05-24 18:02:05.356425200 -0500
+@@ -184,6 +184,18 @@ mingw* | pw32* | cygwin*)
      ;;
  esac
  
@@ -12,14 +12,14 @@
 +    AC_CHECK_TOOL(WINDRES, windres, :)
 +    ;;
 +esac
++
 +AM_CONDITIONAL(WITH_WIN32, test $with_win32 = yes)
 +AM_CONDITIONAL(WITH_NATIVE_WIN32, test $with_native_win32 = yes)
-+
 +
  dnl *******************
  dnl Should we use gtk ?
  dnl *******************
-@@ -208,7 +220,7 @@ if test "x$gnumeric_with_gtk" = xtrue ;
+@@ -207,7 +219,7 @@ if test "x$gnumeric_with_gtk" = xtrue ;
  fi
  
  gnumeric_with_gnome=false
@@ -28,7 +28,7 @@
  	dnl ************************************
  	dnl Are the GNOME extensions available ?
  	dnl ************************************
-@@ -252,16 +264,6 @@ PKG_CHECK_MODULES(GNUMERIC, $gnumeric_re
+@@ -251,16 +263,6 @@ PKG_CHECK_MODULES(GNUMERIC, $gnumeric_re
  AC_SUBST(GNUMERIC_LIBS)
  AC_SUBST(GNUMERIC_CFLAGS)
  
@@ -45,8 +45,8 @@
  AM_CONDITIONAL(CROSS_COMPILING, test x"$cross_compiling" != xno)
  
  if test "x$with_win32" = "xyes"; then
---- origsrc/gnumeric-1.10.7/doc/C/Makefile.am	2010-06-04 22:49:20.000000000 -0500
-+++ src/gnumeric-1.10.7/doc/C/Makefile.am	2010-06-30 22:48:49.198648600 -0500
+--- origsrc/gnumeric-1.10.15/doc/C/Makefile.am	2010-06-04 22:49:20.000000000 -0500
++++ src/gnumeric-1.10.15/doc/C/Makefile.am	2011-05-24 18:01:43.254161000 -0500
 @@ -91,7 +91,7 @@ endif
  
  winhelp_DATA =
@@ -56,8 +56,8 @@
  winhelp_DATA += gnumeric.chm gnumeric.hhmap
  
  gnumeric.hhmap: chm-stamp
---- origsrc/gnumeric-1.10.7/doc/gnumeric-doc.make	2010-06-04 22:42:43.000000000 -0500
-+++ src/gnumeric-1.10.7/doc/gnumeric-doc.make	2010-06-30 22:51:36.220201700 -0500
+--- origsrc/gnumeric-1.10.15/doc/gnumeric-doc.make	2011-05-07 07:46:42.000000000 -0500
++++ src/gnumeric-1.10.15/doc/gnumeric-doc.make	2011-05-24 18:01:43.258161200 -0500
 @@ -6,7 +6,7 @@
  # Requires that the calling makefile define 'lang'
  
@@ -67,8 +67,8 @@
    omffile = gnumeric-$(lang).omf
  endif
  gnumeric_docdir  = $(top_srcdir)/doc
---- origsrc/gnumeric-1.10.7/icons/Makefile.am	2010-06-14 19:50:13.000000000 -0500
-+++ src/gnumeric-1.10.7/icons/Makefile.am	2010-06-30 22:52:01.116625700 -0500
+--- origsrc/gnumeric-1.10.15/icons/Makefile.am	2010-06-14 19:50:13.000000000 -0500
++++ src/gnumeric-1.10.15/icons/Makefile.am	2011-05-24 18:01:43.263161500 -0500
 @@ -24,7 +24,7 @@ EXTRA_DIST = $(icons_DATA) $(mimeicon_DA
  gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
  
@@ -78,9 +78,9 @@
  fake_index_theme_target += install-fake-index-theme
  
  install-fake-index-theme: fake-index-theme
---- origsrc/gnumeric-1.10.7/src/Makefile.am	2010-06-30 23:27:07.743117800 -0500
-+++ src/gnumeric-1.10.7/src/Makefile.am	2010-06-30 19:18:55.000000000 -0500
-@@ -368,12 +368,12 @@ if WITH_NATIVE_WIN32
+--- origsrc/gnumeric-1.10.15/src/Makefile.am	2011-05-06 20:16:32.000000000 -0500
++++ src/gnumeric-1.10.15/src/Makefile.am	2011-05-24 18:01:32.884567900 -0500
+@@ -364,12 +364,12 @@ if WITH_NATIVE_WIN32
      ssconvert_LDFLAGS	+= -mconsole -Wl,--stack,0x4000000
      ssindex_LDFLAGS	+= -mconsole
      ssgrep_LDFLAGS	+= -mconsole
@@ -92,12 +92,12 @@
 -endif
  
 -if WITH_WIN32
- libspreadsheet.def: local.def 
+ libspreadsheet.def: local.def
  	echo EXPORTS > $@ && \
  	cat $^ | sort >> $@
---- origsrc/gnumeric-1.10.7/tools/win32/Makefile.am	2010-04-13 20:07:08.000000000 -0500
-+++ src/gnumeric-1.10.7/tools/win32/Makefile.am	2010-06-30 22:52:31.678373700 -0500
-@@ -15,7 +15,7 @@ EXTRA_DIST = gnumeric.nsi.in gtkrc modul
+--- origsrc/gnumeric-1.10.15/tools/win32/Makefile.am	2010-07-30 19:41:09.000000000 -0500
++++ src/gnumeric-1.10.15/tools/win32/Makefile.am	2011-05-24 18:01:43.267161700 -0500
+@@ -14,7 +14,7 @@ EXTRA_DIST = gnumeric.nsi.in gtkrc modul
  	build jhbuildrc.py
  
  
