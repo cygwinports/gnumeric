@@ -24,3 +24,5 @@ CYGCONF_ARGS="
 	--with-python
 	--with-zlib
 "
+
+KEEP_LA_FILES="none"
