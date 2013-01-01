@@ -1,0 +1,33 @@
+inherit gnome2 perl python
+
+NAME="gnumeric"
+VERSION=1.12.0
+RELEASE=1
+CATEGORY="GNOME Math"
+SUMMARY="GNOME Office Spreadsheet"
+DESCRIPTION="The Gnumeric spreadsheet is part of the GNOME desktop environment.
+The goal of Gnumeric is to be the best possible spreadsheet. We are not
+attempting to clone existing applications. However, Gnumeric can read files
+saved with other spreadsheets and we offer a customizable feel that attempts
+to minimize the costs of transition."
+HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
+
+PATCH_URI="
+	1.10.15-native-win32.patch
+	1.9.14-pkgconfig.patch
+"
+
+PKG_NAMES="${PN} ${PN}-devel"
+gnumeric_CONTENTS="etc/ usr/bin/ usr/lib/${PN}/${PV}/plugins/ usr/lib/goffice/ usr/share/"
+gnumeric_devel_CONTENTS="usr/include/ usr/lib/libspreadsheet.* usr/lib/pkgconfig/"
+
+DIFF_EXCLUDES="gnumeric-config.h.in"
+
+CYGCONF_ARGS="
+	--with-gda
+	--with-paradox
+	--with-perl
+	--with-psiconv
+	--with-python
+	--with-zlib
+"
