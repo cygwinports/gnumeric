@@ -1,7 +1,7 @@
 inherit gnome2 python
 
 NAME="gnumeric"
-VERSION=1.12.1
+VERSION=1.12.4
 RELEASE=1
 CATEGORY="GNOME Math"
 SUMMARY="GNOME Office Spreadsheet"
@@ -17,8 +17,8 @@ PATCH_URI="
 	1.9.14-pkgconfig.patch
 "
 
-PKG_NAMES="${PN} ${PN}-devel"
-gnumeric_CONTENTS="etc/ usr/bin/ usr/lib/${PN}/${PV}/plugins/ usr/lib/goffice/ usr/share/"
+PKG_NAMES="${NAME} ${NAME}-devel"
+gnumeric_CONTENTS="etc/ usr/bin/ usr/lib/${NAME}/${PV}/plugins/ usr/lib/goffice/ usr/share/"
 gnumeric_devel_CONTENTS="usr/include/ usr/lib/libspreadsheet.* usr/lib/pkgconfig/"
 
 DIFF_EXCLUDES="gnumeric-config.h.in"
