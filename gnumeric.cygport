@@ -1,9 +1,9 @@
 inherit gnome2 python
 
 NAME="gnumeric"
-VERSION=1.12.5
+VERSION=1.12.9
 RELEASE=1
-CATEGORY="GNOME Math"
+CATEGORY="Math"
 SUMMARY="GNOME Office Spreadsheet"
 DESCRIPTION="The Gnumeric spreadsheet is part of the GNOME desktop environment.
 The goal of Gnumeric is to be the best possible spreadsheet. We are not
