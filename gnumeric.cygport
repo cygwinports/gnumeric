@@ -1,7 +1,7 @@
 inherit gnome2 python
 
 NAME="gnumeric"
-VERSION=1.12.9
+VERSION=1.12.13
 RELEASE=1
 CATEGORY="Math"
 SUMMARY="GNOME Office Spreadsheet"
@@ -22,8 +22,6 @@ gnumeric_CONTENTS="etc/ usr/bin/ usr/lib/${NAME}/${PV}/plugins/ usr/lib/goffice/
 gnumeric_devel_CONTENTS="usr/include/ usr/lib/libspreadsheet.* usr/lib/pkgconfig/"
 
 DIFF_EXCLUDES="gnumeric-config.h.in"
-
-WANT_AUTOMAKE=1.11
 
 CYGCONF_ARGS="
 	--with-gda
