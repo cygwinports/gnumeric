@@ -9,17 +9,6 @@
  winhelp_DATA += gnumeric.chm gnumeric.hhmap
  
  gnumeric.hhmap: chm-stamp
---- origsrc/gnumeric-1.10.15/doc/gnumeric-doc.make	2011-05-07 07:46:42.000000000 -0500
-+++ src/gnumeric-1.10.15/doc/gnumeric-doc.make	2011-05-24 18:01:43.258161200 -0500
-@@ -6,7 +6,7 @@
- # Requires that the calling makefile define 'lang'
- 
- docname = gnumeric
--if !WITH_WIN32
-+if !WITH_NATIVE_WIN32
-   omffile = gnumeric-$(lang).omf
- endif
- gnumeric_docdir  = $(top_srcdir)/doc
 --- origsrc/gnumeric-1.10.15/icons/Makefile.am	2010-06-14 19:50:13.000000000 -0500
 +++ src/gnumeric-1.10.15/icons/Makefile.am	2011-05-24 18:01:43.263161500 -0500
 @@ -24,7 +24,7 @@ EXTRA_DIST = $(icons_DATA) $(mimeicon_DA

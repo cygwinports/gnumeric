@@ -1,7 +1,7 @@
 inherit gnome2 python
 
 NAME="gnumeric"
-VERSION=1.12.13
+VERSION=1.12.18
 RELEASE=1
 CATEGORY="Math"
 SUMMARY="GNOME Office Spreadsheet"
