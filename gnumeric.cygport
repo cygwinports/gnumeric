@@ -1,8 +1,8 @@
 inherit gnome2 python
 
 NAME="gnumeric"
-VERSION=1.12.22
-RELEASE=2
+VERSION=1.12.23
+RELEASE=1
 CATEGORY="Math"
 SUMMARY="GNOME Office Spreadsheet"
 DESCRIPTION="The Gnumeric spreadsheet is part of the GNOME desktop environment.
@@ -25,9 +25,9 @@ DIFF_EXCLUDES="gnumeric-config.h.in"
 
 CYGCONF_ARGS="
 	--with-gda
-	--with-paradox
+	--without-paradox
 	--with-perl
-	--with-psiconv
+	--without-psiconv
 	--with-python
 	--with-zlib
 "
