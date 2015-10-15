@@ -27,7 +27,7 @@ CYGCONF_ARGS="
 	--with-gda
 	--without-paradox
 	--with-perl
-	--without-psiconv
+	--with-psiconv
 	--with-python
 	--with-zlib
 "
