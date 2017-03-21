@@ -1,5 +1,5 @@
---- origsrc/gnumeric-1.10.15/doc/C/Makefile.am	2010-06-04 22:49:20.000000000 -0500
-+++ src/gnumeric-1.10.15/doc/C/Makefile.am	2011-05-24 18:01:43.254161000 -0500
+--- origsrc/gnumeric-1.10.15/doc/Makefile.am	2010-06-04 22:49:20.000000000 -0500
++++ src/gnumeric-1.10.15/doc/Makefile.am	2011-05-24 18:01:43.254161000 -0500
 @@ -91,7 +91,7 @@ endif
  
  winhelp_DATA =
