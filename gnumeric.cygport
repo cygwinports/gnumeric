@@ -1,7 +1,7 @@
 inherit gnome2 python
 
 NAME="gnumeric"
-VERSION=1.12.34
+VERSION=1.12.35
 RELEASE=1
 CATEGORY="Math"
 SUMMARY="GNOME Office Spreadsheet"
@@ -17,9 +17,44 @@ PATCH_URI="
 	1.9.14-pkgconfig.patch
 "
 
-PKG_NAMES="${NAME} ${NAME}-devel"
-gnumeric_CONTENTS="etc/ usr/bin/ usr/lib/${NAME}/${PV}/plugins/ usr/lib/goffice/ usr/share/"
-gnumeric_devel_CONTENTS="usr/include/ usr/lib/libspreadsheet.* usr/lib/pkgconfig/"
+PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-gdaif ${NAME}-perl ${NAME}-psiconv ${NAME}-python"
+gnumeric_CONTENTS="
+	--exclude=gdaif
+	--exclude=gnome-glossary
+	--exclude=perl-*
+	--exclude=psiconv
+	--exclude=py*
+	etc/
+	usr/bin/
+	usr/lib/${NAME}/${VERSION}/plugins/
+	usr/lib/goffice/
+	usr/share/
+"
+gnumeric_devel_CONTENTS="
+	usr/include/libspreadsheet-${VERSION%.*}/
+	usr/lib/libspreadsheet.dll.a
+	usr/lib/pkgconfig/libspreadsheet-${VERSION%.*}.pc
+"
+gnumeric_gdaif_SUMMARY="Database plugin for ${SUMMARY}"
+gnumeric_gdaif_CONTENTS="
+	usr/lib/gnumeric/${VERSION}/plugins/gdaif/
+"
+gnumeric_perl_SUMMARY="Perl plugin support for ${SUMMARY}"
+gnumeric_perl_CONTENTS="
+	usr/lib/gnumeric/${VERSION}/plugins/perl-func/
+	usr/lib/gnumeric/${VERSION}/plugins/perl-loader/
+"
+gnumeric_psiconv_SUMMARY="Psion document loader for ${SUMMARY}"
+gnumeric_psiconv_CONTENTS="
+	usr/lib/gnumeric/${VERSION}/plugins/psiconv/
+"
+gnumeric_python_SUMMARY="Python plugin support for ${SUMMARY}"
+gnumeric_python_REQUIRES="python2-gi"
+gnumeric_python_CONTENTS="
+	usr/lib/gnumeric/${VERSION}/plugins/gnome-glossary/
+	usr/lib/gnumeric/${VERSION}/plugins/py-func/
+	usr/lib/gnumeric/${VERSION}/plugins/python-loader/
+"
 
 DIFF_EXCLUDES="gnumeric-config.h.in"
 
