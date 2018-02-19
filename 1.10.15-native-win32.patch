@@ -1,3 +1,20 @@
+--- origsrc/gnumeric-1.12.38/configure.ac	2017-12-10 16:41:36.000000000 -0600
++++ src/gnumeric-1.12.38/configure.ac	2018-02-14 04:13:33.563681100 -0600
+@@ -263,12 +263,12 @@ dnl prep the pixmap generator
+ dnl ****************************
+ 
+ AC_ARG_VAR(GLIB_GENMARSHAL, [The glib-genmarshal executable.])
+-AC_CHECK_PROG(GLIB_GENMARSHAL, glib-genmarshal$ac_exeext, glib-genmarshal$ac_exeext)
++AC_CHECK_PROG(GLIB_GENMARSHAL, glib-genmarshal, glib-genmarshal)
+ GLIB_COMPILE_RESOURCES=`$PKG_CONFIG --variable=glib_compile_resources gio-2.0`
+ AC_SUBST(GLIB_COMPILE_RESOURCES)
+ 
+ AC_ARG_VAR(GDK_PIXBUF_CSOURCE, [The gdk-pixbuf-csource executable.])
+-AC_CHECK_PROG(GDK_PIXBUF_CSOURCE, gdk-pixbuf-csource$ac_exeext, gdk-pixbuf-csource$ac_exeext)
++AC_CHECK_PROG(GDK_PIXBUF_CSOURCE, gdk-pixbuf-csource, gdk-pixbuf-csource)
+ 
+ AC_ARG_ENABLE(component,
+   AS_HELP_STRING([--disable-component], [Do not build the goffice component]),
 --- origsrc/gnumeric-1.10.15/doc/Makefile.am	2010-06-04 22:49:20.000000000 -0500
 +++ src/gnumeric-1.10.15/doc/Makefile.am	2011-05-24 18:01:43.254161000 -0500
 @@ -91,7 +91,7 @@ endif
